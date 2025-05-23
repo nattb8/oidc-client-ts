@@ -11,6 +11,5 @@
     "emitDeclarationOnly": true,
     "tsBuildInfoFile": "tsconfig.build.tsbuildinfo"
   },
-  "files": ["src/index.ts"],
-  "include": []
+  "include": ["src/**/*.ts"]
 }
