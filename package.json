@@ -30,7 +30,7 @@
   ],
   "scripts": {
     "build": "echo '--- Running node scripts/build.js ---' && node scripts/build.js && echo '--- Running npm run build-types ---' && npm run build-types --loglevel verbose",
-    "build-types": "echo '--- Running tsc ---' && tsc -p tsconfig.build.json --listEmittedFiles --diagnostics --extendedDiagnostics --traceResolution && echo '--- TSC Finished. Contents of ./lib: ---' && ls -la ./lib && echo '--- Running api-extractor ---' && api-extractor run --diagnostics",
+    "build-types": "echo '--- Running tsc ---' && tsc -p tsconfig.build.json --listEmittedFiles --diagnostics --extendedDiagnostics && echo '--- TSC Finished. Contents of ./lib: ---' && ls -la ./lib && echo '--- Running api-extractor ---' && api-extractor run --diagnostics && echo '--- API Extractor Finished. Contents of ./dist/types/oidc-client-ts.d.ts: ---' && cat ./dist/types/oidc-client-ts.d.ts",
     "clean": "git clean -fdX dist lib *.tsbuildinfo",
     "prepack": "npm run build --loglevel verbose",
     "test": "tsc && jest",
