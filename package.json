@@ -36,7 +36,7 @@
     "test": "tsc && jest",
     "typedoc": "typedoc",
     "lint": "eslint --max-warnings=0 --cache .",
-    "prepare": "husky"
+    "prepare": "npm run build && husky"
   },
   "dependencies": {
     "jwt-decode": "^4.0.0"
